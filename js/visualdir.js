@@ -16,10 +16,11 @@ $(document).ready(function(){
         //}
         $(this).addClass("highlight");
         var id = $(this).attr("id");
-        $("#stickyinfo").show().css("top",50+(7*id)).html(
+        $("#stickyinfo").show().css("top",40+(7*id)).html(
             "Name = "+$(this).children().attr("data-name")+
             "<br />Size = "+($(this).children().attr("data-size")/1024).toFixed(2) + "KB"
             );
+        //$("#stickyinfo").show();
     //alert("ID = "+ $(this).attr("id"));
                 
     },function(){
