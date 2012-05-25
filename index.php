@@ -18,6 +18,7 @@
                 /*margin: 2px 2px 2px 2px;*/
                 height:5px;
                 border: solid black 1px;
+                
             }
             
             li:hover{
@@ -203,11 +204,9 @@
         
         foreach ($images as $item) {
             $size_percent = number_format($item['size'] / $images[0]['size'] * 100, 2);
-            $file = pathinfo($item['name']);
-            //echo $file['extension'];
-            
-            $li_class = '';
-            $span_class='';
+            $file         = pathinfo($item['name']);
+            $li_class     = '';
+            $span_class   = '';
             $ext = @$file['extension'];
             switch ($ext){
                 case "jpg" :$span_class = "image";$li_class = "image_back";break;
